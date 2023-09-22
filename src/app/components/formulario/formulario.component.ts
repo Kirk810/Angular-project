@@ -5,8 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.css'],
 })
-export class FormularioComponent {
+export class FormularioComponent implements OnInit {
   public user!: any;
+  public campo!: string;
 
   constructor() {
     this.user = {
@@ -18,4 +19,17 @@ export class FormularioComponent {
   }
 
   ngOnInit() {}
+
+  onSubmit() {
+    alert('Formulario enviado!!');
+    console.log(this.user);
+  }
+
+  hasDadoClick() {
+    alert('Has dado click!!');
+  }
+
+  hasSalido() {
+    alert('Has salido');
+  }
 }
